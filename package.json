@@ -1,0 +1,33 @@
+{
+  "name": "gulp-requiresafe",
+  "version": "1.0.0",
+  "description": "A gulp plugin that runs requiresafe check",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/requiresafe/gulp-requiresafe.git"
+  },
+  "keywords": [
+    "security",
+    "gulp",
+    "gulpplugin",
+    "requiresafe",
+    "nodesecurity"
+  ],
+  "author": "^Lift Security",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/requiresafe/gulp-requiresafe/issues"
+  },
+  "homepage": "https://github.com/requiresafe/gulp-requiresafe#readme",
+  "dependencies": {
+    "gulp-util": "^3.0.6"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^6.1.0"
+  }
+}
