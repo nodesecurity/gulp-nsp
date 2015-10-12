@@ -1,9 +1,12 @@
 # gulp-requiresafe
 
-# Usage
+# Installation
+
 To install the gulp-requiresafe plugin into your project simply run
 
-`npm install gulp-requiresafe --save`
+npm install gulp-requiresafe --save
+
+# Usage
 
 Then in your gulpfile, add the following task.
 
