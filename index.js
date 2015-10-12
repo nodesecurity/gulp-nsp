@@ -7,7 +7,6 @@ var RequireSafe = require('requiresafe');
 
 var rsGulp = function (params, callback) {
 
-
   var payload = {};
 
   if (params.package) {
