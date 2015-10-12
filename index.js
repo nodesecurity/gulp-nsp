@@ -52,7 +52,6 @@ var rsGulp = function (params, callback) {
 
       });
 
-      //grunt.fail.warn(Chalk.red('(+) ') + data.length + ' vulnerabilities found\n');
       stack = stack + Chalk.red('(+) ') + data.length + ' vulnerabilities found\n';
     }
 
