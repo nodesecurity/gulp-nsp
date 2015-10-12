@@ -18,16 +18,17 @@
     "nodesecurity"
   ],
   "author": "^Lift Security",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/requiresafe/gulp-requiresafe/issues"
   },
   "homepage": "https://github.com/requiresafe/gulp-requiresafe#readme",
   "dependencies": {
-    "gulp-util": "^3.0.6"
+    "requiresafe": "^2.0.3"
   },
   "devDependencies": {
     "code": "^1.5.0",
-    "lab": "^6.1.0"
+    "lab": "^6.2.0",
+    "gulp-util": "^3.0.6"
   }
 }
