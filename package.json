@@ -4,7 +4,8 @@
   "description": "A gulp plugin that runs requiresafe check",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "shrinkwrap": "npm shrinkwrap && shrinkydink"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "code": "^1.5.0",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
-    "lab": "^6.2.0"
+    "lab": "^6.2.0",
+    "shrinkydink": "^1.0.0"
   }
 }
