@@ -54,7 +54,7 @@ var rsGulp = function (params, callback) {
       stack = stack + Chalk.red('(+) ') + data.length + ' vulnerabilities found\n';
     }
 
-    if (params.stopOnError === false) {
+    if (params.stopOnError === false || data.length === 0) {
       GulpUtil.log(stack);
       return callback();
     };

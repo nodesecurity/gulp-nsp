@@ -15,8 +15,13 @@ var gulpRequireSafe = require('gulp-requiresafe');
 
 //To check your project
 gulp.task('requiresafe', function (cb) {
-  var package = fs.readFileSync('./package.json'); // probably don't actually do this.
-  gulpRequireSafe({package: package}, cb);
+  gulpRequireSafe({package: __dirname + '/package.json'}, cb);
+});
+```
+
+//If you're using a shrinkwrap file
+gulp.task('requiresafe', function (cb) {
+  gulpRequireSafe({shrinkwrap: __dirname + '/npm-shrinkwrap.json'}, cb);
 });
 ```
 
@@ -25,7 +30,7 @@ If you don't want to stop your gulp flow if some vulnerabilities have been found
 ```
 gulp.task('requiresafe', function (cb) {
   gulpRequireSafe({
-    path: './',
+    package: __dirname + '/package.json',
     stopOnError: false
   }, cb);
 });
