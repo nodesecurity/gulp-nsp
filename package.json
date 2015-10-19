@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "eslint-config-requiresafe": "1.0.0",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
     "lab": "^6.2.0",
