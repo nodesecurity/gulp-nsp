@@ -57,7 +57,7 @@ var rsGulp = function (params, callback) {
     if (params.stopOnError === false) {
       GulpUtil.log(stack);
       return callback();
-    };
+    }
 
     return callback({
       stack: stack,
