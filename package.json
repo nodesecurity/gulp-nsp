@@ -1,30 +1,11 @@
 {
   "name": "gulp-requiresafe",
-  "version": "1.1.2",
   "description": "A gulp plugin that runs requiresafe check",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "shrinkwrap": "npm shrinkwrap && shrinkydink"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/requiresafe/gulp-requiresafe.git"
-  },
-  "keywords": [
-    "security",
-    "gulp",
-    "gulpplugin",
-    "requiresafe",
-    "nodesecurity"
-  ],
+  "version": "1.1.2",
   "author": "^Lift Security",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/requiresafe/gulp-requiresafe/issues"
   },
-  "homepage": "https://github.com/requiresafe/gulp-requiresafe#readme",
   "dependencies": {
     "chalk": "^1.1.1",
     "cli-table": "^0.3.1",
@@ -38,5 +19,24 @@
     "gulp-util": "^3.0.6",
     "lab": "^6.2.0",
     "shrinkydink": "^1.0.0"
+  },
+  "homepage": "https://github.com/requiresafe/gulp-requiresafe#readme",
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "nodesecurity",
+    "requiresafe",
+    "security"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/requiresafe/gulp-requiresafe.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "shrinkwrap": "npm shrinkwrap && shrinkydink",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
