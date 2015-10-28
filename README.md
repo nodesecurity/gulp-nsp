@@ -3,8 +3,9 @@
 # Installation
 
 To install the gulp-requiresafe plugin into your project simply run
-
+```bash
 npm install gulp-requiresafe --save
+```  
 
 # Usage
 
