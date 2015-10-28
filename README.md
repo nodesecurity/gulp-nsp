@@ -10,24 +10,26 @@ npm install gulp-requiresafe --save
 
 Then in your gulpfile, add the following task.
 
-```
+```javascript
 var gulpRequireSafe = require('gulp-requiresafe');
 
 //To check your project
 gulp.task('requiresafe', function (cb) {
   gulpRequireSafe({package: __dirname + '/package.json'}, cb);
 });
-```
-
+```  
+  
+```javascript
 //If you're using a shrinkwrap file
 gulp.task('requiresafe', function (cb) {
   gulpRequireSafe({shrinkwrap: __dirname + '/npm-shrinkwrap.json'}, cb);
 });
-```
+```  
+
 
 If you don't want to stop your gulp flow if some vulnerabilities have been found use the stopOnError option:
 
-```
+```javascript
 gulp.task('requiresafe', function (cb) {
   gulpRequireSafe({
     package: __dirname + '/package.json',
