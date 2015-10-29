@@ -1,7 +1,7 @@
 {
-  "name": "gulp-requiresafe",
-  "version": "1.1.2",
-  "description": "A gulp plugin that runs requiresafe check",
+  "name": "gulp-nsp",
+  "version": "2.0.0",
+  "description": "A gulp plugin that runs Node Security check",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,7 +27,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "cli-table": "^0.3.1",
-    "requiresafe": "^2.3.0"
+    "nsp": "^2.0.0"
   },
   "devDependencies": {
     "code": "^1.5.0",
