@@ -3,7 +3,7 @@
 var GulpUtil = require('gulp-util');
 var Chalk = require('chalk');
 var Table = require('cli-table');
-var RequireSafe = require('requiresafe');
+var Nsp = require('nsp');
 
 var rsGulp = function (params, callback) {
 
@@ -17,7 +17,7 @@ var rsGulp = function (params, callback) {
     payload.shrinkwrap = params.shrinkwrap;
   }
 
-  RequireSafe.check(payload, function (err, data) {
+  Nsp.check(payload, function (err, data) {
 
     if (err) {
       return callback(Chalk.yellow('(+) ') + err);
