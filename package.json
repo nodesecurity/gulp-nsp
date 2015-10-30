@@ -19,7 +19,6 @@
     "nodesecurity"
   ],
   "author": "^Lift Security",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/nodesecurity/gulp-nsp/issues"
   },
@@ -31,9 +30,12 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "eslint": "^1.7.3",
+    "eslint-config-requiresafe": "1.0.0",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
     "lab": "^6.2.0",
     "shrinkydink": "^1.0.0"
-  }
+  },
+  "license": "Apache-2.0"
 }
