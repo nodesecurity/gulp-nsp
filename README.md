@@ -6,7 +6,7 @@ To install the gulp-nsp plugin into your project simply run
 
 ```bash
 npm install gulp-nsp --save
-```  
+```
 
 # Usage
 
@@ -19,16 +19,18 @@ var gulpNSP = require('gulp-nsp');
 gulp.task('nsp', function (cb) {
   gulpNSP({package: __dirname + '/package.json'}, cb);
 });
-```  
-  
+```
+
 ```javascript
 //If you're using a shrinkwrap file
 gulp.task('nsp', function (cb) {
   gulpNSP({shrinkwrap: __dirname + '/npm-shrinkwrap.json'}, cb);
 });
-```  
+```
 
+## Options
 
+### stopOnError
 If you don't want to stop your gulp flow if some vulnerabilities have been found use the stopOnError option:
 
 ```javascript
@@ -36,6 +38,18 @@ gulp.task('nsp', function (cb) {
   gulpNSP({
     package: __dirname + '/package.json',
     stopOnError: false
+  }, cb);
+});
+```
+
+### output
+If you want to use an alternative output formatter provided by nsp use the output option.
+
+```javascript
+gulp.task('nsp', function (cb) {
+  gulpNSP({
+    package: __dirname + '/package.json',
+    output: 'summary'
   }, cb);
 });
 ```
