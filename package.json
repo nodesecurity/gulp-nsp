@@ -1,10 +1,10 @@
 {
   "name": "gulp-nsp",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A gulp plugin that runs Node Security check",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "shrinkwrap": "npm shrinkwrap && shrinkydink"
   },
   "repository": {
@@ -33,9 +33,5 @@
     "gulp": "^3.9.0",
     "shrinkydink": "^1.0.0"
   },
-  "license": "Apache-2.0",
-  "scripts": {
-    "lint": "eslint .",
-    "shrinkwrap": "npm shrinkwrap && shrinkydink"
-  }
+  "license": "Apache-2.0"
 }
