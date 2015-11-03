@@ -1,8 +1,6 @@
 'use strict';
 
 var GulpUtil = require('gulp-util');
-var Chalk = require('chalk');
-var Table = require('cli-table');
 var Nsp = require('nsp');
 
 var rsGulp = function (params, callback) {
