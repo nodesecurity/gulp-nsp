@@ -17,7 +17,12 @@ var rsGulp = function (params, callback) {
   }
 
   if (params.output) {
-    formatter = Nsp.formatters[params.output];
+    if (Nsp.formatters.hasOwnProperty(params.output)) {
+      formatter = Nsp.formatters[params.output];
+    } else {
+      console.log('we got somewhere');
+      return callback('Invalid formatter specified in options. Must be one of ' + Object.keys(Nsp.formatters).join(', ') + '\n');
+    }
   }
 
   Nsp.check(payload, function (err, data) {
