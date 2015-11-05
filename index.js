@@ -16,12 +16,8 @@ var rsGulp = function (params, callback) {
     payload.shrinkwrap = params.shrinkwrap;
   }
 
-  if (params.output) {
-    if (Nsp.formatters.hasOwnProperty(params.output)) {
-      formatter = Nsp.formatters[params.output];
-    } else {
-      return callback('Invalid formatter specified in options. Must be one of ' + Object.keys(Nsp.formatters).join(', ') + '\n');
-    }
+  if (params.output && Nsp.formatters.hasOwnProperty(params.output)) {
+    formatter = Nsp.formatters[params.output];
   }
 
   Nsp.check(payload, function (err, data) {
