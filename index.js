@@ -16,8 +16,12 @@ var rsGulp = function (params, callback) {
     payload.shrinkwrap = params.shrinkwrap;
   }
 
-  if (params.output && Nsp.formatters.hasOwnProperty(params.output)) {
-    formatter = Nsp.formatters[params.output];
+  if (params.output) {
+    if (Nsp.formatters.hasOwnProperty(params.output)) {
+      formatter = Nsp.formatters[params.output];
+    } else {
+      GulpUtil.log('Invalid formatter specified in options. Must be one of ' + Object.keys(Nsp.formatters).join(', ') + '\nUsing default formatter');
+    }
   }
 
   Nsp.check(payload, function (err, data) {
