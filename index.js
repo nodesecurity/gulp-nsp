@@ -24,14 +24,15 @@ var rsGulp = function (params, callback) {
 
     var output = formatter(err, data);
 
+    if (err) {
+      return callback(output);
+    }
+
     if (params.stopOnError === false || data.length === 0) {
       GulpUtil.log(output);
       return callback();
     }
 
-    if (err) {
-      return callback(output);
-    }
 
     if (data.length > 0) {
       return callback(output);
