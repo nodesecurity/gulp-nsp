@@ -20,7 +20,7 @@ var rsGulp = function (params, callback) {
     if (Nsp.formatters.hasOwnProperty(params.output)) {
       formatter = Nsp.formatters[params.output];
     } else {
-      return callback('Invalid formatter specified in options. Must be one of ' + Object.keys(Nsp.formatters).join(', ') + '\n');
+      GulpUtil.log('Invalid formatter specified in options. Must be one of ' + Object.keys(Nsp.formatters).join(', ') + '\nUsing default formatter');
     }
   }
 
