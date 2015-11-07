@@ -2,6 +2,7 @@
 
 var GulpUtil = require('gulp-util');
 var Nsp = require('nsp');
+var PLUGIN_NAME = require('./package.json').name;
 
 var rsGulp = function (params, callback) {
 
@@ -27,9 +28,10 @@ var rsGulp = function (params, callback) {
   Nsp.check(payload, function (err, data) {
 
     var output = formatter(err, data);
+    var pluginErr = new GulpUtil.PluginError(PLUGIN_NAME, output);
 
     if (err) {
-      return callback(output);
+      return callback(pluginErr);
     }
 
     if (params.stopOnError === false || data.length === 0) {
@@ -37,9 +39,8 @@ var rsGulp = function (params, callback) {
       return callback();
     }
 
-
     if (data.length > 0) {
-      return callback(output);
+      return callback(pluginErr);
     }
 
   });
