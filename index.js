@@ -32,7 +32,7 @@ var rsGulp = function (params, callback) {
       return callback(output);
     }
 
-    if (params.stopOnError === false || data.length === 0) {
+    if (params.stopOnError === false || data && data.length === 0) {
       GulpUtil.log(output);
       return callback();
     }
