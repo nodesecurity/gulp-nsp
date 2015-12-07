@@ -16,6 +16,11 @@ var rsGulp = function (params, callback) {
     payload.shrinkwrap = params.shrinkwrap;
   }
 
+  // Enable builds behind the HTTP_PROXY
+  if (params.proxy) {
+    payload.proxy = params.proxy;
+  }
+
   if (params.output) {
     if (Nsp.formatters.hasOwnProperty(params.output)) {
       formatter = Nsp.formatters[params.output];
