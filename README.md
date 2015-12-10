@@ -53,3 +53,16 @@ gulp.task('nsp', function (cb) {
   }, cb);
 });
 ```
+
+### proxy
+If you want to use a proxy you can configure it via this option.
+
+
+```javascript
+gulp.task('nsp', function (cb) {
+  gulpNSP({
+    package: __dirname + '/package.json',
+    proxy: 'http://127.0.0.1:8080'
+  }, cb);
+});
+```

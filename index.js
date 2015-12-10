@@ -17,6 +17,11 @@ var rsGulp = function (params, callback) {
     payload.shrinkwrap = params.shrinkwrap;
   }
 
+  // Enable builds behind the HTTP_PROXY
+  if (params.proxy) {
+    payload.proxy = params.proxy;
+  }
+
   if (params.output) {
     if (Nsp.formatters.hasOwnProperty(params.output)) {
       formatter = Nsp.formatters[params.output];
@@ -34,7 +39,7 @@ var rsGulp = function (params, callback) {
       return callback(pluginErr);
     }
 
-    if (params.stopOnError === false || data.length === 0) {
+    if (params.stopOnError === false || data && data.length === 0) {
       GulpUtil.log(output);
       return callback();
     }
