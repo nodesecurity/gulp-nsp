@@ -2,6 +2,7 @@
 
 var GulpUtil = require('gulp-util');
 var Nsp = require('nsp');
+var PLUGIN_NAME = require('./package.json').name;
 
 var rsGulp = function (params, callback) {
 
@@ -24,7 +25,8 @@ var rsGulp = function (params, callback) {
   if (params.output) {
     if (Nsp.formatters.hasOwnProperty(params.output)) {
       formatter = Nsp.formatters[params.output];
-    } else {
+    }
+    else {
       GulpUtil.log('Invalid formatter specified in options. Must be one of ' + Object.keys(Nsp.formatters).join(', ') + '\nUsing default formatter');
     }
   }
@@ -32,9 +34,10 @@ var rsGulp = function (params, callback) {
   Nsp.check(payload, function (err, data) {
 
     var output = formatter(err, data);
+    var pluginErr = new GulpUtil.PluginError(PLUGIN_NAME, output);
 
     if (err) {
-      return callback(output);
+      return callback(pluginErr);
     }
 
     if (params.stopOnError === false || data && data.length === 0) {
@@ -42,9 +45,8 @@ var rsGulp = function (params, callback) {
       return callback();
     }
 
-
     if (data.length > 0) {
-      return callback(output);
+      return callback(pluginErr);
     }
 
   });
