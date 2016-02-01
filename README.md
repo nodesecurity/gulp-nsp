@@ -66,3 +66,6 @@ gulp.task('nsp', function (cb) {
   }, cb);
 });
 ```
+
+### Exceptions
+The Node Security CLI supports adding exceptions. These are advisories that you have evaluated and personally deemed unimportant for your project. Instructions are available on the [nsp cli repository](https://github.com/nodesecurity/nsp#exceptions).
