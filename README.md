@@ -22,9 +22,12 @@ gulp.task('nsp', function (cb) {
 ```
 
 ```javascript
-//If you're using a shrinkwrap file
+//If you're using a shrinkwrap file, pass both the shrinkwrap and the package.json
 gulp.task('nsp', function (cb) {
-  gulpNSP({shrinkwrap: __dirname + '/npm-shrinkwrap.json'}, cb);
+  gulpNSP({
+    shrinkwrap: __dirname + '/npm-shrinkwrap.json',
+    package: __dirname + '/package.json'
+  }, cb);
 });
 ```
 
