@@ -37,6 +37,10 @@ var rsGulp = function (params, callback) {
     var pluginErr = new GulpUtil.PluginError(PLUGIN_NAME, output);
 
     if (err) {
+      if (params.stopOnError === false) {
+         GulpUtil.log(output);
+         return callback();
+      }
       return callback(pluginErr);
     }
 

@@ -22,9 +22,12 @@ gulp.task('nsp', function (cb) {
 ```
 
 ```javascript
-//If you're using a shrinkwrap file
+//If you're using a shrinkwrap file, pass both the shrinkwrap and the package.json
 gulp.task('nsp', function (cb) {
-  gulpNSP({shrinkwrap: __dirname + '/npm-shrinkwrap.json'}, cb);
+  gulpNSP({
+    shrinkwrap: __dirname + '/npm-shrinkwrap.json',
+    package: __dirname + '/package.json'
+  }, cb);
 });
 ```
 
@@ -66,3 +69,6 @@ gulp.task('nsp', function (cb) {
   }, cb);
 });
 ```
+
+### Exceptions
+The Node Security CLI supports adding exceptions. These are advisories that you have evaluated and personally deemed unimportant for your project. Instructions are available on the [nsp cli repository](https://github.com/nodesecurity/nsp#exceptions).
