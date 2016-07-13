@@ -1,6 +1,6 @@
 {
   "name": "gulp-nsp",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "dependencies": {
     "gulp-util": {
       "version": "3.0.7",
