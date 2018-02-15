@@ -6,7 +6,7 @@ var GulpNSP = require('./index.js');
 Gulp.task('nsp', function (cb) {
 
   GulpNSP({
-    shrinkwrap: __dirname + '/npm-shrinkwrap.json',
+    packagelock: __dirname + '/package-lock.json',
     package: __dirname + '/package.json'
   }, cb);
 });
