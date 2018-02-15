@@ -1,6 +1,6 @@
 {
   "name": "gulp-nsp",
-  "version": "2.4.2",
+  "version": "3.0.0",
   "description": "A gulp module that runs Node Security check",
   "main": "index.js",
   "scripts": {
