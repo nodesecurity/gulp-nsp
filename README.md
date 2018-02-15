@@ -46,13 +46,13 @@ gulp.task('nsp', function (cb) {
 ```
 
 ### output
-If you want to use an alternative output formatter provided by nsp use the output option.
+If you want to use an alternative output reporter provided by nsp use the output option.
 
 ```javascript
 gulp.task('nsp', function (cb) {
   gulpNSP({
     package: __dirname + '/package.json',
-    output: 'summary'
+    reporter: 'summary'
   }, cb);
 });
 ```
